@@ -1,79 +1,87 @@
-# 🌌 Ether OS (MVP)
+# 🧠 EtherOS — Modular Immersive Desktop Environment (MVP)
 
-**Ether OS** is a next-generation immersive desktop environment built for experimentation, creativity, and intuitive computing. It combines gesture and voice input, symbolic command mapping, and a modular app system — all within a VR-ready, OS-like shell.
+EtherOS is a next-gen modular desktop environment built for immersive computing, symbolic input, and decentralized session portability.
 
-This is the MVP version built using **Electron**, **React**, and **Three.js**, designed to simulate the user experience and test core concepts like Symbol Cast input and a 3D desktop environment.
-
----
-
-## ✨ Features
-
-- ⚡️ Simulated OS desktop (Electron + React + Tailwind)
-- 🖼️ 3D environment powered by Three.js
-- ✍️ Gesture recognition (Symbol Cast engine)
-- 🎙️ Voice command input (Web Speech API)
-- 🗂️ Modular "mini-apps" (chat, file viewer, etc.)
-- 📦 Simple local mock file system
+This repo contains:
+- A **NixOS-based desktop environment layer**
+- A **browser-accessible web interface**
+- A shared runtime system for gestures, state, and command handling
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Goals
 
-- **Electron** – Native desktop container
-- **React + Tailwind CSS** – UI & layout
-- **Three.js** – Immersive background and interface
-- **TensorFlow.js** – Gesture recognition (simulated)
-- **Web Speech API** – Voice input
-- **Node.js** – Command routing & filesystem mocking
+- Create a lightweight, declarative desktop layer on top of NixOS
+- Simulate VR/immersive computing with SymbolCast input (gestures & voice)
+- Use devices as personal cloud mesh nodes (e.g., headless laptops)
+- Offer browser-based access for testing, collaboration, and mobile users
 
 ---
 
-## 🚀 Getting Started
+## 📁 Structure
 
+```plaintext
+nixos/     → Flake + overlays for NixOS DE setup
+web/       → Web version of EtherOS UI (React + Tailwind + Three.js)
+runtime/   → Shared SymbolCast + state logic
+docs/      → Architecture, usage, and planning docs
+```
+
+
+⸻
+
+## ⚙️ Getting Started
+
+### 🔹 Run the Web Version
 ```bash
-git clone https://github.com/yourname/ether-os.git
-cd ether-os
+cd web
 npm install
-npm run start
+npm run dev
 ```
 
-Make sure you have Node.js and npm installed.
+### 🔹 Build NixOS Layer
 
----
-
-## 🧪 Project Structure
+You must have Nix + flakes enabled.
 ```bash
-apps/           → Mini-apps like Chat, File Explorer
-renderer/       → Frontend (React + Three.js)
-main/           → Electron main process
-symbol-cast/    → Gesture & voice recognition logic
-qpp-mock/       → Mock logic for Q++ integration
-public/         → Static assets
-utils/          → Shared functions
+cd nixos
+nix develop
+nixos-rebuild switch --flake .
 ```
 
 
 ---
 
-## 🎯 Goals of the MVP
-- Prototype gesture + voice control
-- Simulate immersive OS navigation
-- Build and test symbolic command workflows
-- Gather feedback from early users & creators
+## 🌌 MVP Features (WIP)
+	•	Modular folder structure
+	•	Basic desktop layout in web
+	•	SymbolCast input (mock gestures + voice)
+	•	NixOS flake for personal DE boot
+	•	Shared command & file system logic
 
 ---
 
-## 📚 Future Vision
-
-Ether OS will eventually support:
-- Native Q++ quantum logic execution
-- Symbol Cast spell compiler and scripting language
-- Real file systems, networking, and AI agents
-- VR-native interface and headset support
-- Decentralized user maps and collaboration zones
+## 📚 Documentation
+	•	docs/architecture.md – Full system vision
+	•	docs/roadmap.md – MVP goals + phases
+	•	docs/usage.md – Dev setup for Nix & Web
 
 ---
 
 ## 🤝 Contributing
 
-This project is in early development. If you’re excited about the future of immersive operating systems, quantum computing, or intuitive interfaces — feel free to fork, build, or reach out.
+This project is in active development. If you love OS dev, symbolic UI, or immersive experiences — join us!
+
+---
+
+## 🌐 License
+
+MIT — feel free to remix, fork, and build with us.
+
+---
+
+Want me to:
+- Scaffold the folders + stub files in a zip?
+- Create starter `flake.nix` or web `vite.config.ts`?
+- Write the architecture doc next?
+
+Let’s build ✨
