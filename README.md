@@ -77,7 +77,3 @@ Ether OS will eventually support:
 ## 🤝 Contributing
 
 This project is in early development. If you’re excited about the future of immersive operating systems, quantum computing, or intuitive interfaces — feel free to fork, build, or reach out.
-
----
-
-## 📬 Contact
