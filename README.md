@@ -1,4 +1,5 @@
 # 🧠 EtherOS — Modular Immersive Desktop Environment (MVP)
+this project will be track in another repo: e-co-os to ensure solid mapping from hardware to software
 
 EtherOS is a next-gen modular desktop environment built for immersive computing, symbolic input, and decentralized session portability.
 
